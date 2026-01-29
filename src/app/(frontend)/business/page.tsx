@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { Breadcrumb } from '@/components/Breadcrumb'
 
 const services = [
@@ -74,7 +73,7 @@ export default function BusinessPage() {
           <h1 className="text-5xl font-black tracking-tight text-charcoal mb-4">业务体系</h1>
           <div className="h-1.5 w-20 bg-primary"></div>
           <p className="mt-8 text-gray-500 max-w-2xl text-lg leading-relaxed">
-            基于全生命周期绩效管理逻辑，为政府机构提供"事前、事中、事后"闭环评估方案，以专业深度助力行政效能提升。
+            基于全生命周期绩效管理逻辑，为政府机构提供&ldquo;事前、事中、事后&rdquo;闭环评估方案，以专业深度助力行政效能提升。
           </p>
         </div>
       </section>

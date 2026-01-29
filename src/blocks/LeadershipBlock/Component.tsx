@@ -1,14 +1,18 @@
 import React from 'react'
+import Image from 'next/image'
 
 export const LeadershipBlock: React.FC = () => {
   return (
     <section className="mb-32">
       <div className="flex flex-col lg:flex-row items-stretch bg-white border border-gray-100 shadow-2xl">
         <div className="lg:w-5/12 min-h-[500px] relative">
-          <img
+          <Image
             alt="董事长张闰政"
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mAUlweWEohStbXq04t9B9qaajKGmALqxwrYU6u_9bqtwnOs-6suVjR1q7h4WWFv40fSNBbiImxGo-4Qrr3Z8i0hrjk7k_HNpxrs5koqyVCMMZMNcXa5Y3curWty9Hl4DncSk4N2EoKjW8KSyTfne7iJITb2Ja7Tf-n2ZGgqOXZcqs1MfBLPinyZ1Erog87t13AjdP7TFQbu5jtveph9Z3jNKTX6acQxwpPPkn06lxUNiJMvP7ByIXRYZ15k0JEFjpia82mxcAuXP"
+            width={800}
+            height={500}
+            sizes="(max-width: 1024px) 100vw, 42vw"
           />
           <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
         </div>
@@ -25,7 +29,7 @@ export const LeadershipBlock: React.FC = () => {
             用第三方的冷峻视角，助力政府释放治理热度。
           </h3>
           <p className="text-lg text-gray-600 leading-relaxed mb-12 font-medium">
-            "在公共治理精细化的今天，第三方的价值在于不偏不倚的'显微镜'与'手术刀'。闰政咨询不只是评估报告的制作者，更是政府科学决策的外部守望者。我们深知，每一份评估数据的背后，都关乎公共资源的效率，关乎社会民生的福祉。"
+            &ldquo;在公共治理精细化的今天，第三方的价值在于不偏不倚的&lsquo;显微镜&rsquo;与&lsquo;手术刀&rsquo;。闰政咨询不只是评估报告的制作者，更是政府科学决策的外部守望者。我们深知，每一份评估数据的背后，都关乎公共资源的效率，关乎社会民生的福祉。&rdquo;
           </p>
           <div className="pt-8 border-t border-gray-100">
             <p className="font-black text-2xl tracking-tighter text-charcoal">张闰政</p>

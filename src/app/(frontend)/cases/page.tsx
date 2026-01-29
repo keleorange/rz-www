@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Breadcrumb } from '@/components/Breadcrumb'
 import { FilterTabs } from '@/components/FilterTabs'
 
 const industryCategories = [

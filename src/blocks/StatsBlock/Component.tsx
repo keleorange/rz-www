@@ -16,7 +16,7 @@ export const StatsBlock: React.FC = () => {
               专业的分析视角
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-10">
-              闰政咨询以"科学、公正、严谨"为信条。我们整合行业专家库，利用多维数据采集系统，为超过200家政府机构提供过高水准的评估报告，助力公共资源精准投放。
+              闰政咨询以&ldquo;科学、公正、严谨&rdquo;为信条。我们整合行业专家库，利用多维数据采集系统，为超过200家政府机构提供过高水准的评估报告，助力公共资源精准投放。
             </p>
             <div className="grid grid-cols-2 gap-12 mb-12">
               <div className="border-l-4 border-primary pl-6">

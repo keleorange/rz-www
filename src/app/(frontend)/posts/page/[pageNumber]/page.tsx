@@ -70,19 +70,25 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
 }
 
 export async function generateStaticParams() {
-  const payload = await getPayload({ config: configPromise })
-  const { totalDocs } = await payload.count({
-    collection: 'posts',
-    overrideAccess: false,
-  })
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { totalDocs } = await payload.count({
+      collection: 'posts',
+      overrideAccess: false,
+    })
 
-  const totalPages = Math.ceil(totalDocs / 10)
+    const totalPages = Math.ceil(totalDocs / 12) || 1
+    const pages: { pageNumber: string }[] = []
 
-  const pages: { pageNumber: string }[] = []
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push({ pageNumber: String(i) })
+    }
 
-  for (let i = 1; i <= totalPages; i++) {
-    pages.push({ pageNumber: String(i) })
+    return pages
+  } catch {
+    // Build may run without DB (e.g. Vercel). Return empty so build succeeds; pages render on demand.
+    return []
   }
-
-  return pages
 }
+
+export const dynamicParams = true

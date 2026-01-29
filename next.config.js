@@ -18,6 +18,11 @@ const nextConfig = {
           protocol: url.protocol.replace(':', ''),
         }
       }),
+      {
+        hostname: 'lh3.googleusercontent.com',
+        protocol: 'https',
+        pathname: '/**',
+      },
     ],
   },
   webpack: (webpackConfig) => {
