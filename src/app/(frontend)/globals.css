@@ -3,6 +3,18 @@
 
 @config '../../../tailwind.config.mjs';
 
+/**
+ * Tailwind CSS v4 配置说明
+ *
+ * 颜色和 borderRadius 统一在此文件中管理：
+ * 1. :root 中定义 CSS 变量（单一数据源）
+ * 2. @theme inline 中映射到 Tailwind（--color-* 和 --radius-*）
+ *
+ * 优先级：@theme inline > tailwind.config.mjs
+ *
+ * 修改颜色/圆角时，请修改此文件中的 CSS 变量
+ */
+
 @custom-variant dark (&:is([data-theme='dark'] *));
 @custom-variant sm (@media (width >= theme(--breakpoint-sm)));
 @custom-variant md (@media (width >= theme(--breakpoint-md)));
@@ -14,11 +26,19 @@
   h1,
   h2,
   h3,
-  h4,
+  h4 {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 900;
+  }
+
   h5,
   h6 {
     font-weight: unset;
     font-size: unset;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   }
 }
 
@@ -93,8 +113,11 @@
   --card-foreground: oklch(14.5% 0 0deg);
   --popover: oklch(100% 0 0deg);
   --popover-foreground: oklch(14.5% 0 0deg);
-  --primary: oklch(20.5% 0 0deg);
-  --primary-foreground: oklch(98.5% 0 0deg);
+  --primary: #B22222;
+  --primary-dark: #8B0000;
+  --charcoal: #1A1A1A;
+  --background-light: #F9FAFB;
+  --primary-foreground: #FFFFFF;
   --secondary: oklch(97% 0 0deg);
   --secondary-foreground: oklch(20.5% 0 0deg);
   --muted: oklch(97% 0 0deg);
@@ -111,7 +134,7 @@
   --chart-3: oklch(39.8% 0.07 227.392deg);
   --chart-4: oklch(82.8% 0.189 84.429deg);
   --chart-5: oklch(76.9% 0.188 70.08deg);
-  --radius: 0.625rem;
+  --radius: 0;
   --sidebar: oklch(98.5% 0 0deg);
   --sidebar-foreground: oklch(14.5% 0 0deg);
   --sidebar-primary: oklch(20.5% 0 0deg);
@@ -132,8 +155,11 @@
   --card-foreground: oklch(98.5% 0 0deg);
   --popover: oklch(14.5% 0 0deg);
   --popover-foreground: oklch(98.5% 0 0deg);
-  --primary: oklch(98.5% 0 0deg);
-  --primary-foreground: oklch(20.5% 0 0deg);
+  --primary: #B22222;
+  --primary-dark: #8B0000;
+  --charcoal: #1A1A1A;
+  --background-light: #F9FAFB;
+  --primary-foreground: #FFFFFF;
   --secondary: oklch(26.9% 0 0deg);
   --secondary-foreground: oklch(98.5% 0 0deg);
   --muted: oklch(26.9% 0 0deg);
@@ -163,6 +189,12 @@
   --error: oklch(45% 0.1 25deg);
 }
 
+/**
+ * @theme inline - 将 CSS 变量映射到 Tailwind
+ *
+ * 这里的配置会覆盖 tailwind.config.mjs 中的同名配置
+ * 修改颜色或圆角时，请修改上面的 :root 中的 CSS 变量
+ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -171,6 +203,9 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-charcoal: var(--charcoal);
+  --color-background-light: var(--background-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -188,10 +223,11 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius: 0;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -209,8 +245,10 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    @apply bg-background-light text-charcoal min-h-screen flex flex-col;
+    font-family: 'Noto Sans SC', sans-serif;
   }
 }
 
