@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 const newsItems = [
   {
@@ -44,7 +45,7 @@ export const NewsBlock: React.FC = () => {
             className="text-primary font-bold text-xs tracking-widest uppercase flex items-center gap-2 hover:gap-4 transition-all"
           >
             进入新闻中心
-            <span className="material-symbols-outlined text-lg">arrow_forward</span>
+            <ArrowRight size={18} />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

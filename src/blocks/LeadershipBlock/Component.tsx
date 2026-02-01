@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Quote } from 'lucide-react'
 
 export const LeadershipBlock: React.FC = () => {
   return (
@@ -18,9 +19,7 @@ export const LeadershipBlock: React.FC = () => {
         </div>
         <div className="lg:w-7/12 p-10 md:p-20 flex flex-col justify-center relative">
           <div className="absolute top-0 right-0 p-12 opacity-5">
-            <span className="material-symbols-outlined text-[120px] text-charcoal">
-              format_quote
-            </span>
+            <Quote className="text-charcoal" size={120} />
           </div>
           <h2 className="text-primary font-black text-xs tracking-[0.4em] uppercase mb-8">
             Leadership Message

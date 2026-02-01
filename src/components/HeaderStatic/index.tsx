@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { Logo } from '@/components/Logo'
+import { Search, Gavel } from 'lucide-react'
 
 const navigation = [
   { name: '首页', href: '/' },
@@ -46,7 +47,7 @@ export const HeaderStatic: React.FC = () => {
           <div className="flex items-center gap-6">
             <div className="relative hidden xl:block">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
-                <span className="material-symbols-outlined text-xl">search</span>
+                <Search size={20} />
               </span>
               <input
                 className="w-48 bg-gray-50 border border-gray-200 rounded-sm pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary focus:border-primary"
@@ -57,7 +58,7 @@ export const HeaderStatic: React.FC = () => {
               href="/official"
               className="flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-1.5 rounded-sm text-xs font-bold tracking-widest transition-all"
             >
-              <span className="material-symbols-outlined text-lg">gavel</span>
+              <Gavel size={18} />
               <span>官方入口</span>
             </Link>
           </div>

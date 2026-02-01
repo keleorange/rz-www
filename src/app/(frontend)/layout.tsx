@@ -52,12 +52,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
-        {/* Material Symbols icon font - not available via next/font */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font -- icon font, no next/font equivalent */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=optional"
-        />
       </head>
       <body>
         <Providers>

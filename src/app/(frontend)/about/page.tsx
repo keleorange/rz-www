@@ -2,6 +2,7 @@ import React from 'react'
 import { TimelineBlock } from '@/blocks/TimelineBlock/Component'
 import { OrgChartBlock } from '@/blocks/OrgChartBlock/Component'
 import { LeadershipBlock } from '@/blocks/LeadershipBlock/Component'
+import { Gavel, BarChart3, ScrollText, Users, ShieldCheck, BookOpen, Landmark, BadgeCheck } from 'lucide-react'
 
 export default function AboutPage() {
   return (
@@ -64,24 +65,22 @@ export default function AboutPage() {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="bg-gray-100 p-8 flex flex-col items-center justify-center text-center">
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">gavel</span>
+                <Gavel className="text-primary mb-4" size={36} />
                 <h4 className="font-bold mb-2">行政效能评估</h4>
                 <p className="text-xs text-gray-500">科学量化职能履行实效</p>
               </div>
               <div className="bg-charcoal text-white p-8 flex flex-col items-center justify-center text-center">
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">
-                  analytics
-                </span>
+                <BarChart3 className="text-primary mb-4" size={36} />
                 <h4 className="font-bold mb-2">预算绩效评价</h4>
                 <p className="text-xs text-gray-400">事前评审与事后评价</p>
               </div>
               <div className="bg-primary text-white p-8 flex flex-col items-center justify-center text-center">
-                <span className="material-symbols-outlined text-white text-4xl mb-4">policy</span>
+                <ScrollText className="text-white mb-4" size={36} />
                 <h4 className="font-bold mb-2">重大政策评估</h4>
                 <p className="text-xs text-white/80">政策落地效果深度分析</p>
               </div>
               <div className="bg-gray-100 p-8 flex flex-col items-center justify-center text-center">
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">groups</span>
+                <Users className="text-primary mb-4" size={36} />
                 <h4 className="font-bold mb-2">民意调查服务</h4>
                 <p className="text-xs text-gray-500">客观反馈社会治理感知度</p>
               </div>
@@ -102,9 +101,7 @@ export default function AboutPage() {
               <h3 className="text-4xl font-black mb-12 tracking-tight">专业资质与研究实力</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className="border-t border-white/20 pt-8">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-6">
-                    verified_user
-                  </span>
+                  <ShieldCheck className="text-primary mb-6" size={36} />
                   <h5 className="text-xl font-bold mb-4">官方认证资质</h5>
                   <ul className="text-gray-400 space-y-3 text-sm">
                     <li>• 工程咨询甲级资信（评估咨询）</li>
@@ -114,9 +111,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <div className="border-t border-white/20 pt-8">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-6">
-                    menu_book
-                  </span>
+                  <BookOpen className="text-primary mb-6" size={36} />
                   <h5 className="text-xl font-bold mb-4">核心研究成果</h5>
                   <ul className="text-gray-400 space-y-3 text-sm">
                     <li>• 出版《政府绩效管理实战路径》专著</li>
@@ -126,9 +121,7 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <div className="border-t border-white/20 pt-8">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-6">
-                    account_balance
-                  </span>
+                  <Landmark className="text-primary mb-6" size={36} />
                   <h5 className="text-xl font-bold mb-4">学术合作平台</h5>
                   <ul className="text-gray-400 space-y-3 text-sm">
                     <li>• 多所知名高校公共管理学院实训基地</li>
@@ -140,7 +133,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="absolute right-[-10%] bottom-[-10%] opacity-10">
-              <span className="material-symbols-outlined text-[400px]">verified</span>
+              <BadgeCheck size={400} />
             </div>
           </div>
         </section>

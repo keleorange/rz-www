@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Logo } from '@/components/Logo'
+import { Building, FileText, Mail } from 'lucide-react'
 
 const footerLinks = {
   aboutUs: [
@@ -40,19 +41,19 @@ export const FooterStatic: React.FC = () => {
                 className="size-10 bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-colors"
                 href="#"
               >
-                <span className="material-symbols-outlined text-lg">domain</span>
+                <Building size={18} />
               </a>
               <a
                 className="size-10 bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-colors"
                 href="#"
               >
-                <span className="material-symbols-outlined text-lg">description</span>
+                <FileText size={18} />
               </a>
               <a
                 className="size-10 bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-colors"
                 href="#"
               >
-                <span className="material-symbols-outlined text-lg">mail</span>
+                <Mail size={18} />
               </a>
             </div>
           </div>

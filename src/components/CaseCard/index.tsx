@@ -1,4 +1,5 @@
 import React from 'react'
+import { Building2 } from 'lucide-react'
 
 export interface CaseCardProps {
   title: string
@@ -29,7 +30,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({
       </h3>
 
       <div className="flex items-center text-gray-700 mb-4">
-        <span className="material-symbols-outlined mr-2 text-primary">business</span>
+        <Building2 className="mr-2 text-primary" size={20} />
         <span>{client}</span>
       </div>
 

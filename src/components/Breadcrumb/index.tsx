@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { ChevronRight } from 'lucide-react'
 
 interface BreadcrumbProps {
   items: Array<{ label: string; href?: string }>
@@ -17,9 +18,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
           ) : (
             <span className="text-charcoal">{item.label}</span>
           )}
-          {index < items.length - 1 && (
-            <span className="material-symbols-outlined text-[14px]">chevron_right</span>
-          )}
+          {index < items.length - 1 && <ChevronRight size={14} />}
         </React.Fragment>
       ))}
     </nav>

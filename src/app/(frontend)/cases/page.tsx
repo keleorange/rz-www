@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { FilterTabs } from '@/components/FilterTabs'
+import { ArrowUp, ArrowRight, Plus, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const industryCategories = [
   '全部分类',
@@ -106,7 +107,8 @@ export default function CasesPage() {
               <div className="flex items-baseline gap-2">
                 <span className="text-5xl font-black text-primary">500+</span>
                 <span className="text-green-600 text-sm font-bold flex items-center">
-                  <span className="material-symbols-outlined text-xs">arrow_upward</span>15%
+                  <ArrowUp size={12} />
+                  15%
                 </span>
               </div>
               <p className="text-xs opacity-50">覆盖全国20余个省市自治区</p>
@@ -118,7 +120,8 @@ export default function CasesPage() {
               <div className="flex items-baseline gap-2">
                 <span className="text-5xl font-black text-primary">50+</span>
                 <span className="text-green-600 text-sm font-bold flex items-center">
-                  <span className="material-symbols-outlined text-xs">arrow_upward</span>5%
+                  <ArrowUp size={12} />
+                  5%
                 </span>
               </div>
               <p className="text-xs opacity-50">长期合作各级财政及职能部门</p>
@@ -188,8 +191,7 @@ export default function CasesPage() {
                     href={`/cases/${caseItem.id}`}
                     className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
                   >
-                    查看详情{' '}
-                    <span className="material-symbols-outlined text-base">arrow_forward</span>
+                    查看详情 <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
@@ -198,7 +200,7 @@ export default function CasesPage() {
           {/* Empty/Add state variant */}
           <article className="border border-dashed border-[#dddddd] flex flex-col items-center justify-center p-12 text-center group cursor-pointer hover:bg-gray-50 transition-colors">
             <div className="size-16 rounded-full bg-[#f4f0f0] flex items-center justify-center text-[#886363] mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-              <span className="material-symbols-outlined text-3xl">add</span>
+              <Plus size={30} />
             </div>
             <h3 className="text-lg font-bold mb-2">更多案例整理中</h3>
             <p className="text-xs opacity-50">如有特定行业项目展示需求，请联系咨询</p>
@@ -212,7 +214,7 @@ export default function CasesPage() {
               onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
               className="size-10 flex items-center justify-center border border-[#eeeeee] hover:border-primary transition-colors"
             >
-              <span className="material-symbols-outlined">chevron_left</span>
+              <ChevronLeft size={20} />
             </button>
             <button
               onClick={() => setCurrentPage(1)}
@@ -251,7 +253,7 @@ export default function CasesPage() {
               onClick={() => setCurrentPage(Math.min(12, currentPage + 1))}
               className="size-10 flex items-center justify-center border border-[#eeeeee] hover:border-primary transition-colors"
             >
-              <span className="material-symbols-outlined">chevron_right</span>
+              <ChevronRight size={20} />
             </button>
           </nav>
         </div>

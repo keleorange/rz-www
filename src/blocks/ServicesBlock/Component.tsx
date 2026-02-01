@@ -1,27 +1,33 @@
 import React from 'react'
 import Link from 'next/link'
+import { BarChart3, Scale, TrendingUp, Landmark, ChevronRight, LucideIcon } from 'lucide-react'
 
-const services = [
+const services: Array<{
+  icon: LucideIcon
+  title: string
+  description: string
+  link: string
+}> = [
   {
-    icon: 'analytics',
+    icon: BarChart3,
     title: '预算绩效评价',
     description: '事前评估、事中监控、事后评价，确保财政资金使用提质增效。',
     link: '/services/budget-performance',
   },
   {
-    icon: 'rule',
+    icon: Scale,
     title: '营商环境评价',
     description: '对标国际及国内先进标准，对政务环境、法治环境进行深度剖析。',
     link: '/services/business-environment',
   },
   {
-    icon: 'query_stats',
+    icon: TrendingUp,
     title: '民生实事评估',
     description: '围绕社会治理及公共服务，客观测评群众获得感与满意度。',
     link: '/services/public-welfare',
   },
   {
-    icon: 'account_balance',
+    icon: Landmark,
     title: '行政事业咨询',
     description: '内部控制建设、成本核算、政府综合财务报告编制咨询服务。',
     link: '/services/administrative-consulting',
@@ -47,7 +53,7 @@ export const ServicesBlock: React.FC = () => {
               className="bg-white p-12 hover:bg-primary group transition-all duration-300"
             >
               <div className="size-16 border-2 border-primary text-primary mb-8 flex items-center justify-center group-hover:border-white group-hover:text-white transition-colors">
-                <span className="material-symbols-outlined text-4xl">{service.icon}</span>
+                <service.icon size={36} />
               </div>
               <h4 className="text-2xl font-black mb-4 group-hover:text-white transition-colors">
                 {service.title}
@@ -59,7 +65,7 @@ export const ServicesBlock: React.FC = () => {
                 href={service.link}
                 className="text-primary font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 group-hover:text-white transition-all"
               >
-                详情介绍 <span className="material-symbols-outlined text-sm">chevron_right</span>
+                详情介绍 <ChevronRight size={14} />
               </Link>
             </div>
           ))}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Scale, Lightbulb, Shield } from 'lucide-react'
 
 export const OrgChartBlock: React.FC = () => {
   return (
@@ -29,21 +30,21 @@ export const OrgChartBlock: React.FC = () => {
         </div>
         <div className="mt-12 pt-12 border-t border-gray-200 w-full grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 border-l-4 border-primary shadow-md text-center">
-            <span className="material-symbols-outlined text-primary text-3xl mb-4">rule</span>
+            <Scale className="text-primary mb-4 mx-auto" size={30} />
             <h6 className="font-black text-lg tracking-tight">绩效评价事业部</h6>
             <p className="text-xs text-gray-500 mt-4 leading-relaxed font-semibold">
               预算评价、政策评估、民调分析
             </p>
           </div>
           <div className="bg-white p-8 border-l-4 border-primary shadow-md text-center">
-            <span className="material-symbols-outlined text-primary text-3xl mb-4">lightbulb</span>
+            <Lightbulb className="text-primary mb-4 mx-auto" size={30} />
             <h6 className="font-black text-lg tracking-tight">政策研究与智库部</h6>
             <p className="text-xs text-gray-500 mt-4 leading-relaxed font-semibold">
               体制改革研究、公共政策研发、数据挖掘
             </p>
           </div>
           <div className="bg-white p-8 border-l-4 border-primary shadow-md text-center">
-            <span className="material-symbols-outlined text-primary text-3xl mb-4">shield</span>
+            <Shield className="text-primary mb-4 mx-auto" size={30} />
             <h6 className="font-black text-lg tracking-tight">质量与合规中心</h6>
             <p className="text-xs text-gray-500 mt-4 leading-relaxed font-semibold">
               风控审计、报告内审、标准化管理

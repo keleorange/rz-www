@@ -1,34 +1,40 @@
 import React from 'react'
 import { Breadcrumb } from '@/components/Breadcrumb'
+import { ClipboardCheck, Target, Activity, Landmark, CheckSquare, MoreHorizontal, LucideIcon } from 'lucide-react'
 
-const services = [
+const services: Array<{
+  icon: LucideIcon
+  title: string
+  items: string[]
+  dark?: boolean
+}> = [
   {
-    icon: 'fact_check',
+    icon: ClipboardCheck,
     title: '事前绩效评估',
     items: ['重大政策与项目入库评审', '立项必要性与投入经济性分析', '绩效目标设置合理性审核'],
   },
   {
-    icon: 'target',
+    icon: Target,
     title: '绩效目标管理',
     items: ['指标体系构建与标准化', '中期财政规划绩效目标编审', '年度预算绩效目标申报指导'],
   },
   {
-    icon: 'monitoring',
+    icon: Activity,
     title: '绩效跟踪监控',
     items: ['运行情况"双监控"评估', '预算执行偏离度预警分析', '动态纠偏与调整建议咨询'],
   },
   {
-    icon: 'account_balance',
+    icon: Landmark,
     title: '部门整体支出评价',
     items: ['履职效能与管理水平综合评价', '核心产出与社会效益深度量化', '资产管理与财务合规性审计'],
   },
   {
-    icon: 'assignment_turned_in',
+    icon: CheckSquare,
     title: '项目绩效评价',
     items: ['重大专项支出后评价', '转移支付资金使用效益评估', '第三方满意度调查及证据链复核'],
   },
   {
-    icon: 'more_horiz',
+    icon: MoreHorizontal,
     title: '延伸咨询服务',
     items: ['内部控制体系建设咨询', '政府财务报告编制服务', '绩效考核系统定制化开发'],
     dark: true,
@@ -89,13 +95,7 @@ export default function BusinessPage() {
                   service.dark ? 'bg-charcoal text-white' : 'bg-white'
                 }`}
               >
-                <span
-                  className={`material-symbols-outlined text-5xl mb-8 ${
-                    service.dark ? 'text-primary' : 'text-primary'
-                  }`}
-                >
-                  {service.icon}
-                </span>
+                <service.icon className="text-primary mb-8" size={48} />
                 <h3 className={`text-2xl font-black mb-6 ${service.dark ? 'text-white' : ''}`}>
                   {service.title}
                 </h3>

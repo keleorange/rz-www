@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export interface HeroBlockProps {
   title?: string
@@ -51,9 +52,7 @@ export const HeroBlock: React.FC<HeroBlockProps> = ({
               className="px-10 py-5 bg-primary text-white font-bold text-sm tracking-widest uppercase rounded-sm shadow-2xl hover:bg-primary-dark transition-all flex items-center gap-3 group"
             >
               {primaryCta.text}
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                arrow_right_alt
-              </span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
             </Link>
             <Link
               href={secondaryCta.href}
